@@ -11,9 +11,19 @@ namespace Jokes.App_Start
             AddDefaultIgnorePatterns(bundles.IgnoreList);
 
             bundles.Add(
+              new ScriptBundle("~/scripts/modernizr")
+                .Include("~/scripts/modernizr-{version}.js")
+              );
+
+            bundles.Add(
               new ScriptBundle("~/scripts/vendor")
                 .Include("~/scripts/jquery-{version}.js")
                 .Include("~/scripts/knockout-{version}.debug.js")
+                .Include("~/scripts/foundation/foundation.js")
+                .Include("~/scripts/foundation/foundation.topbar.js")
+                .Include("~/scripts/foundation/foundation.dropdown.js")
+                .Include("~/scripts/foundation/foundation.reveal.js")
+                //.Include("~/scripts/foundation/foundation.*")                
                 //.Include("~/scripts/toastr.js")
                 .Include("~/scripts/Q.js")
                 //.Include("~/scripts/breeze.debug.js")
@@ -23,6 +33,7 @@ namespace Jokes.App_Start
 
             bundles.Add(
               new StyleBundle("~/Content/css")
+                .Include("~/sass/Site.css") //zurb foundation
                 //.Include("~/Content/ie10mobile.css")
                 //.Include("~/Content/bootstrap.css")
                 //.Include("~/Content/bootstrap-responsive.css")
