@@ -21,15 +21,15 @@ namespace Jokes.App_Start
                 .Include("~/scripts/moment.js")
               );
 
-            //bundles.Add(
-            //  new StyleBundle("~/Content/css")
-            //    .Include("~/Content/ie10mobile.css")
-            //    .Include("~/Content/bootstrap.css")
-            //    .Include("~/Content/bootstrap-responsive.css")
-            //    .Include("~/Content/durandal.css")
-            //    .Include("~/Content/toastr.css")
-            //    .Include("~/Content/app.css")
-            //  );
+            bundles.Add(
+              new StyleBundle("~/Content/css")
+                //.Include("~/Content/ie10mobile.css")
+                //.Include("~/Content/bootstrap.css")
+                //.Include("~/Content/bootstrap-responsive.css")
+                .Include("~/Content/durandal.css")
+                //.Include("~/Content/toastr.css")
+                //.Include("~/Content/app.css")
+              );
         }
 
         public static void AddDefaultIgnorePatterns(IgnoreList ignoreList)
